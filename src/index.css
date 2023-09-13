@@ -19,11 +19,11 @@
     @apply w-[max-content] cursor-pointer rounded-md uppercase shadow-md transition duration-300 ease-in-out hover:scale-105 focus:scale-105 focus:shadow-md focus:outline-none;
 
     &--bg-white {
-      @apply bg-white text-lightBlue;
+      @apply bg-white text-blue-300;
     }
 
     &--bg-lightBlue {
-      @apply bg-lightBlue text-white;
+      @apply bg-blue-300 text-white;
     }
 
     &--bg-gray {
