@@ -31,13 +31,13 @@ const Movie = () => {
 
   const customError = error as CustomErrorType;
 
-  const bgImage = {
-    backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie?.poster_path})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    borderRadius: '50px'
-  };
+  // const bgImage = {
+  //   backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie?.poster_path})`,
+  //   backgroundRepeat: 'no-repeat',
+  //   backgroundSize: 'cover',
+  //   backgroundPosition: 'center',
+  //   borderRadius: '50px'
+  // };
 
   if (isLoading || isRefetching) {
     return <Loading />;

@@ -2,14 +2,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Movie } from '../../../types';
 
-const SearchMovie: FC<Partial<Movie>> = ({
-  id,
-  poster_path,
-  title,
-  original_title,
-  vote_average,
-  release_date
-}) => {
+const SearchMovie: FC<Partial<Movie>> = ({ id, poster_path, title, release_date }) => {
   return (
     <>
       <Link
