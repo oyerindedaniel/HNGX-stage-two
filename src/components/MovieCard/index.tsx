@@ -15,7 +15,7 @@ const MovieCard: FC<Partial<Movie>> = ({ id, poster_path, title, vote_average, r
           <img
             data-testid="movie-poster"
             src={`https://image.tmdb.org/t/p/original/${poster_path}`}
-            alt=""
+            alt={title}
           />
         </div>
         <p className="mb-1" data-testid="movie-title">
