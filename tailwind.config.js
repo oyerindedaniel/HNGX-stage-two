@@ -20,6 +20,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        brand: '#e21e48'
+      },
+      gridTemplateColumns: {
+        'auto-fill-minmax': 'repeat(auto-fill, minmax(16rem, 1fr))'
       }
     }
   },

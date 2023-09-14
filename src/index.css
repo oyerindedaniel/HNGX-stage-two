@@ -44,7 +44,7 @@
   }
 
   .input {
-    @apply rounded-md py-2 px-2 text-xl font-black uppercase text-lightBlue placeholder-gray-300 shadow-md transition duration-300 ease-in-out focus:scale-105 focus:shadow-md focus:outline-none;
+    @apply rounded-md py-2 px-2 text-xl font-black uppercase text-blue-300 placeholder-gray-300 shadow-md transition duration-300 ease-in-out focus:scale-105 focus:shadow-md focus:outline-none;
   }
 }
 

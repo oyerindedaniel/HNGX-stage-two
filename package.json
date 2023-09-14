@@ -7,11 +7,21 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md}\"",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "@svgr/webpack": "^8.1.0",
+    "@tanstack/react-query": "^4.35.3",
+    "axios": "^1.5.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-router-dom": "^6.15.0",
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
