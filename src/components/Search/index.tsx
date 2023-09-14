@@ -1,6 +1,6 @@
 import { FC, useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { Movie } from '../../types';
+import { Movie, CustomError as CustomErrorType } from '../../types';
 import SearchMovie from './Movie';
 import { axios } from '../../utils/axios';
 import { Input } from '../../ui/Input';
@@ -23,7 +23,7 @@ const Search: FC = () => {
     return response.data.results;
   };
 
-  const { data, isLoading, isRefetching, refetch, isError, fetchStatus } = useQuery(
+  const { data, isLoading, isRefetching, error, refetch, isError, fetchStatus } = useQuery(
     ['movieSearch'],
     () => fetchMovieSearchResults(),
     {
@@ -33,6 +33,15 @@ const Search: FC = () => {
       refetchInterval: false
     }
   );
+
+  const customError = error as CustomErrorType;
+
+  useEffect(() => {
+    if (!initialLoad && Boolean(data)) {
+      refetch();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (!debouncedSearch && fetchStatus === 'idle' && !initialLoad) return;
@@ -46,10 +55,10 @@ const Search: FC = () => {
   };
 
   return (
-    <div className="relative w-[500px] text-black">
+    <div className="relative max-w-[500px] text-black">
       <Input
         type="text"
-        className="text-white"
+        className="text-white w-full"
         placeholder="What do you want to watch?"
         rightIcon={<AiOutlineSearch size="20px" fill="white" />}
         onChange={handleInputChange}
@@ -64,6 +73,7 @@ const Search: FC = () => {
             {data.map((movie: Movie) => (
               <SearchMovie
                 key={movie.id}
+                id={movie?.id}
                 title={movie.title}
                 poster_path={movie.poster_path}
                 release_date={movie.release_date}
@@ -71,7 +81,9 @@ const Search: FC = () => {
             ))}
           </div>
         ) : isError ? (
-          <p className="text-center">Error Loading Movies</p>
+          <p className="text-center">
+            {customError?.response?.data?.status_message || 'Error Loading Movies'}
+          </p>
         ) : (
           <p className="text-center">
             {data && data.length === 0 && debouncedSearch ? 'No Movie Found' : ''}

@@ -13,14 +13,14 @@ const SearchMovie: FC<Partial<Movie>> = ({
   return (
     <>
       <Link
-        to={`${id}`}
+        to={`/movie/${id}`}
         className="flex justify-start items-center py-3 px-4 hover:bg-neutral-200 min-h-5rem"
       >
         <div className="w-20 h-14 mr-4 vsm:mr-2">
           <img
             className="w-full h-full object-cover rounded-t-md rounded-b-md shadow-md"
             src={`https://image.tmdb.org/t/p/original/${poster_path}`}
-            alt="movie poster"
+            alt={title}
           />
         </div>
         <span className="text-black">
