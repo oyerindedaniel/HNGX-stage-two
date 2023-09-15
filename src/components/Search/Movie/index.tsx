@@ -6,7 +6,7 @@ const SearchMovie: FC<Partial<Movie>> = ({ id, poster_path, title, release_date 
   return (
     <>
       <Link
-        to={`/movie/${id}`}
+        to={`/movies/${id}`}
         className="flex justify-start items-center py-3 px-4 hover:bg-neutral-200 min-h-5rem"
       >
         <div className="w-20 h-14 mr-4 vsm:mr-2">

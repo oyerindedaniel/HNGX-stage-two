@@ -7,7 +7,7 @@ import { Button } from '../../ui/Button';
 const MovieCard: FC<Partial<Movie>> = ({ id, poster_path, title, vote_average, release_date }) => {
   return (
     <div className="relative" data-testid="movie-card">
-      <Link to={`/movie/${id}`}>
+      <Link to={`/movies/${id}`}>
         <Button size="sm" className="absolute right-3 top-3" variant="brand">
           <MdOutlineFavoriteBorder size="24px" />
         </Button>
