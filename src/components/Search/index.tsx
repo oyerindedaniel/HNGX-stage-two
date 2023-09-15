@@ -27,7 +27,7 @@ const Search: FC = () => {
     ['movieSearch'],
     () => fetchMovieSearchResults(),
     {
-      enabled: Boolean(query),
+      enabled: Boolean(debouncedSearch),
       refetchOnWindowFocus: false,
       refetchOnReconnect: false,
       refetchInterval: false
