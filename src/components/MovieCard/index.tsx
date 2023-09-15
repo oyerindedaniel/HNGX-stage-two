@@ -6,8 +6,8 @@ import { Movie } from '../../types';
 import { Button } from '../../ui/Button';
 const MovieCard: FC<Partial<Movie>> = ({ id, poster_path, title, vote_average, release_date }) => {
   return (
-    <Link to={`/movie/${id}`}>
-      <div className="relative" data-testid="movie-card">
+    <div className="relative" data-testid="movie-card">
+      <Link to={`/movie/${id}`}>
         <Button size="sm" className="absolute right-3 top-3" variant="brand">
           <MdOutlineFavoriteBorder size="24px" />
         </Button>
@@ -34,8 +34,8 @@ const MovieCard: FC<Partial<Movie>> = ({ id, poster_path, title, vote_average, r
             <div>{(Number?.(vote_average) || 0) * 10}%</div>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 

@@ -86,7 +86,7 @@ const Movie = () => {
           </div>
         </div>
 
-        <p className="mb-4 text-sm lg:text-md" data-testid="movie-overview">
+        <p className="mb-4 text-sm md:text-md lg:text-lg" data-testid="movie-overview">
           {movie?.overview}
         </p>
 
