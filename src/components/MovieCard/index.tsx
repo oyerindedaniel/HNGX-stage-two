@@ -26,11 +26,11 @@ const MovieCard: FC<Partial<Movie>> = ({ id, poster_path, title, vote_average, r
         </p>
         <div className="flex gap-5 mb-4">
           <div className="flex gap-3">
-            <img src={Imdb} alt="" />
+            <img src={Imdb} alt="imdb rating" />
             <div>{(Number?.(vote_average) || 0) * 10} / 100</div>
           </div>
           <div className="flex gap-3">
-            <img src={RottenTomatoes} alt="" />
+            <img src={RottenTomatoes} alt="rotten tomatoes rating" />
             <div>{(Number?.(vote_average) || 0) * 10}%</div>
           </div>
         </div>

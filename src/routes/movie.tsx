@@ -53,7 +53,7 @@ const Movie = () => {
   }
 
   return (
-    <div className="p-5 min-h-screen flex flex-col lg:flex-row gap-8 lg:gap-16 items-center max-w-[1500px] mx-auto">
+    <div className="p-5 min-h-screen flex flex-col lg:flex-row gap-8 lg:gap-12 items-center max-w-[1500px] mx-auto">
       <img
         style={{
           width: 'max-content',

@@ -102,7 +102,7 @@ function App() {
         </div>
       </header>
       <main className="text-black mb-20">
-        <section className=" w-[90%] mx-auto">
+        <section className="w-[90%] mx-auto">
           <div className="flex justify-between items-start">
             <h2 className="mb-8 text-2xl md:text-3xl font-semibold">Top Rated</h2>
             <Link to="/" style={{ color: '#e21e48' }}>
